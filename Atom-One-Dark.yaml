@@ -1,0 +1,43 @@
+# All colors must be in the form of '#rrggbb' or '#rgb'.
+# You cannot use color names.
+
+log-view:
+  nickname-format: '<%n>	'
+  scroller-highlight-color: '#c678dd'
+input-text:
+  font-family: "'Fira Mono', Monaco, Trispace, monospace"
+  font-size: 14.0
+  background-color: '#2e323e'
+  color: '#abb2bf'
+  selected:
+    background-color: '#778091'
+member-list:
+  font-family: "'Fira Mono', Monaco, Trispace, monospace"
+  font-size: 14.0
+  color: '#abb2bf'
+  background-color: '#20252b'
+  operator:
+    color: '#7aff7a'
+  selected:
+    color: '#fff'
+server-tree:
+  font-family: "'Fira Mono', Monaco, Trispace, monospace"
+  font-size: 14.0
+  background-color: '#20252b'
+  color: '#abb2bf'
+  highlight:
+    color: '#e06c75'
+  newtalk:
+    color: '#e5c07b'
+  unread:
+    color: '#e5c07b'
+  normal:
+    active:
+      color: '#abb2bf'
+    inactive:
+      color: '#778091'
+  selected:
+    active:
+      color: '#fff'
+    inactive:
+      color: '#96a2b7'

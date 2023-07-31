@@ -1,0 +1,21 @@
+### WP Starter
+*.log
+node_modules/
+.sass-cache/
+*.css.map
+
+### Windows
+Thumbs.db
+Desktop.ini
+
+### OSX
+.DS_Store
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+### Linux
+.directory
+.Trash-*
+*~

@@ -1,0 +1,166 @@
+/**
+ * Atom One Dark Theme for Limechat
+ * 
+ * @author Wellington Estevo <info@propz.de> (https://propz.de)
+ * @repository https://github.com/pr0pz/limechat-atom-one-dark
+ * @version 1.0.0
+ */
+
+@import 'theme-vars';
+
+//	==========
+/*	General */
+//	==========
+	
+	html {
+		font-family: 'Fira Mono', Monaco, Trispace, monospace;
+		font-size: 12pt;
+		background-color: $body-bg;
+		word-wrap: break-word;
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		padding: $padding 0;
+		margin: 0;
+		background-color: $body-bg;
+		color: $body-color;
+	}
+	
+	// The body tag has these classes and attributes too.
+	body.normal {}
+	body.console {}
+
+	body[type=channel] {}
+	body[type=talk] {}
+	body[type=console] {}
+
+	// You can actually completely restyle specific channels.
+	body[channelname='#limechat'] {}
+
+
+//	==========
+/*	General Typo */
+//	==========
+	
+	a {
+		color: $link-color;
+		transition: all .3s;
+
+		&:hover {
+			color: $link-color-hover;
+		}
+	}
+
+	.inlineimage {}
+	.url { word-break: break-all }
+	.address { word-break: break-all; text-decoration: none }
+	.highlight { color: $highlight-color; font-weight: bold }
+	.time { color: $light-gray; flex-shrink:0 }
+	.place { color: $light-blue }
+
+
+//	==========
+/*	Lines */
+//	==========
+
+	.line {
+		padding: $padding-line $padding;
+		display: flex;
+		gap: 10px;
+	}
+
+	// Alternating line bg colors possible.
+	.line[alternate=even] {}
+	.line[alternate=odd] {}
+
+	// Full width lines
+	.line[type=topic],
+	.line[highlight=true],
+	.line[type=action] {
+		padding-top: $padding-line-big;
+		padding-bottom: $padding-line-big;
+	}
+
+	.line[highlight=true] { background-color: $hightlight-bg }
+	.line[type=action] { background-color: lighten($dark-gray, 5%) }
+
+		// Char before nick
+		.line[type=action] .sender:before {
+			content: '* ';
+			white-space: nowrap;
+		}
+
+		.line[type=action] .message:after {
+			content: ' *';
+			white-space: nowrap;
+		}
+
+	// Topic Line
+	[type=channel] .line[type=topic] {
+		position: fixed;
+		top:0;
+		width: 100%;
+		padding-top: calc( $padding / 2 );
+		padding-bottom: calc( $padding / 2 );
+		overflow: auto;
+		background-color: lighten( $dark-gray, 5% );
+		border-bottom: 1px solid $gray;
+		box-shadow: 0 0 40px rgba(#000,.25);
+	}
+
+//	==========
+/*	Nick colors */
+//	==========
+	
+	.sender[type=myself],
+	.sender[type=normal] {
+		//font-weight: bold;
+	}
+	
+	@each $name, $color in $nick-colors
+	{
+		@if $name == 'myself'
+		{
+			.sender[type=myself] { color: #{$color} }
+		}
+		@else if $name == 'normal'
+		{
+			.sender[type=normal] { color: #{$color} }
+		}
+		@else
+		{
+			.sender[type=normal][colornumber='#{$name}'] { color: #{$color} }
+		}
+	}
+
+
+//	==========
+/*	Message type colors */
+//	==========
+	
+	@each $name, $color in $message-colors
+	{
+		.message[type=#{$name}] {
+			color: #{$color};
+			font-style: italic;
+		}
+	}
+
+	// Overrides
+	.message[type=privmsg],
+	.message[type=notice] { font-style: normal }
+	.message[type=error] { font-weight: bold }
+
+
+//	==========
+/*	mIRC color effects */
+//	==========
+	
+	@each $number, $color in $mirc-colors
+	{
+		.effect[color-number='#{$number}'] { color: #{$color} }
+		.effect[bgcolor-number='#{$number}'] { color: #{$color} }
+	}
+

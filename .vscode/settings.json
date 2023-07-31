@@ -1,0 +1,11 @@
+{
+	"liveSassCompile.settings.formats": [
+	  {
+		"format": "expanded",
+		"savePath": "/",
+		"indentType": "tab",
+		"indentWidth": 1
+	  }
+	],
+	"liveSassCompile.settings.generateMap": false
+  }

@@ -1,0 +1,108 @@
+//	==========
+//	Colors
+//	› Atom One Dark theme
+//	==========
+
+	$padding: 15px;
+	$padding-line: 2px;
+	$padding-line-big: $padding-line * 2;
+
+	$white: #bfc8d8;
+	$black: #282c34;
+	$blue: #338cd6;
+	$green: #98c379;
+	$light-red: #e06c75;
+	$brown: #ff5d4f; // dark-red
+	$purple: #c678dd;
+	$orange: #ffba3a;
+	$light-yellow: #e5c07b;
+	$dark-yellow: #d19a66;
+	$light-green: #7aff7a;
+	$light-blue: #61afef;
+	$cyan: #56b6c2;
+	$pink: #da65b5; // magenta
+	$light-cyan: #0ff;
+
+	$dark-gray: #2e323e;
+	$gray: #5c6370;
+	$light-gray: #778091; // Comment gray
+	$lighter-gray: #96a2b7;
+
+	$panels: #20252b; // member list and tree list
+
+	// General
+	$body-bg: $black;
+	$body-color: $white;
+	$link-color: $light-blue;
+	$link-color-hover: $purple;
+	$hightlight-bg: rgba( $light-red, .15 );			// Highlight line background
+	$highlight-color: $light-red;	// Highlight color
+	$time: $cyan;					// Time of message
+	$place: $blue;					// Place of message (chan, pm, servername)
+
+	// Different Nick colors
+	$nick-colors: (
+		myself: #fff,
+		normal: $white,
+		1: $light-yellow,
+		2: $orange,
+		3: $light-green,
+		4: $green,
+		5: $purple,
+		6: #16e889,
+		7: $brown,
+		8: $pink,
+		9: $light-yellow,
+		10: $light-red,
+		11: $light-cyan,
+		12: $blue,
+		13: #ff9898,
+		14: $cyan,
+		15: $dark-yellow
+	);
+	
+	// Different message type colors
+	$message-colors: (
+		system: $green,
+		error: $brown,
+		reply: $lighter-gray,
+		error_reply: $brown,
+		dcc_send_send: $light-blue,
+		dcc_send_receive: $blue,
+		privmsg: $white,
+		notice: $lighter-gray,
+		action: $lighter-gray,
+		join: $green,
+		part: $brown,
+		kick: $light-red,
+		quit: $brown,
+		kill: $green,
+		nick: $green,
+		mode: $green,
+		topic: #fff,
+		invite: $green,
+		wallops: $green,
+		debug_send: $light-gray,
+		debug_receive: $gray
+	);
+
+	// Different mirc colors (fore- and background)
+	// https://www.mirc.com/colors.html
+	$mirc-colors: (
+		0: $white,
+		1: $black,
+		2: $blue,
+		3: $green,
+		4: $light-red,
+		5: $brown,
+		6: $purple,
+		7: $orange,
+		8: $light-yellow,
+		9: $light-green,
+		10: $cyan,
+		11: $light-cyan,
+		12: §light-blue,
+		13: $pink,
+		14: $light-gray,
+		15: $lighter-gray
+	);
