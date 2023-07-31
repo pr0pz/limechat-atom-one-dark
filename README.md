@@ -13,15 +13,15 @@ _Like it? I'd appreciate the support :)_
 
 I created this theme based on the Atom One Dark Theme.
 
-![Screenshot of Atom One Dark Limechat Theme](https://github.com/pr0pz//limechat-atom-one-dark/blob/main/screenshot.jpg?raw=true)
+![Screenshot of Atom One Dark LimeChat Theme](https://github.com/pr0pz/limechat-atom-one-dark/blob/main/screenshot.jpg?raw=true)
 
 
 ### __Instructions__
 
-1. Download the latest release (or just the .css and .yaml file) and extract the zip
-2. Copy or move the Atom-One-Dark.css + Atom-One-Dark.yaml to the Limechat Themes folder.
+1. Download the latest release (or just the .css and .yaml file inside the repository) and extract the zip
+2. Copy or move the Atom-One-Dark.css + Atom-One-Dark.yaml to the LimeChat Themes folder.
 3. Activate the Theme in LimeChat
-4. Optional: Get the original Atom Font "Fira Mono" > https://github.com/mozilla/Fira/releases
+4. Optional: Install the original Atom Font "Fira Mono" > https://github.com/mozilla/Fira/releases
 
 The Themes folder is usually located here:
 ```
@@ -32,12 +32,7 @@ That's it!
 
 ### __Found any Bugs?__
 
-If you find any bugs/errors, feel free to [post an issue](https://github.com/pr0pz/scene-release-parser/issues).
-
-
-### __License__
-
-![License: MIT](https://img.shields.io/npm/l/release-parser)
+If you find any bugs/errors, feel free to [post an issue](https://github.com/pr0pz/limechat-atom-one-dark/issues).
 
 _That's it!_
 
