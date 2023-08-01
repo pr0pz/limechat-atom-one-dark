@@ -3,7 +3,7 @@
  * 
  * @author Wellington Estevo <info@propz.de> (https://propz.de)
  * @repository https://github.com/pr0pz/limechat-atom-one-dark
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 @import 'theme-vars';
@@ -13,15 +13,17 @@
 //	==========
 	
 	html {
-		font-family: 'Fira Mono', Monaco, Trispace, monospace;
+		font-family: 'Fira Mono', Monaco, monospace;
 		font-size: 12pt;
-		background-color: $body-bg;
+		//background-color: $body-bg;
+		background-color: $panels;
 		word-wrap: break-word;
 		margin: 0;
 		padding: 0;
 	}
 
-	body {
+	[type=channel],
+	[type=console] {
 		padding: $padding 0;
 		margin: 0;
 		background-color: $body-bg;
@@ -32,12 +34,12 @@
 	body.normal {}
 	body.console {}
 
-	body[type=channel] {}
-	body[type=talk] {}
-	body[type=console] {}
+	[type=channel] {}
+	[type=talk] {}
+	[type=console] {}
 
 	// You can actually completely restyle specific channels.
-	body[channelname='#limechat'] {}
+	[channelname='#limechat'] {}
 
 
 //	==========
@@ -78,13 +80,15 @@
 	// Full width lines
 	.line[type=topic],
 	.line[highlight=true],
-	.line[type=action] {
+	.line[type=action],
+	.line[type=invite] {
 		padding-top: $padding-line-big;
 		padding-bottom: $padding-line-big;
 	}
 
 	.line[highlight=true] { background-color: $hightlight-bg }
-	.line[type=action] { background-color: lighten($dark-gray, 5%) }
+	.line[type=action] { background-color: lighten($dark-gray, 7%) }
+	.line[type=invite] { background-color: rgba($green, .2)}
 
 		// Char before nick
 		.line[type=action] .sender:before {
@@ -109,6 +113,12 @@
 		border-bottom: 1px solid $gray;
 		box-shadow: 0 0 40px rgba(#000,.25);
 	}
+
+	// Every message type has also it's line type
+	// Deactivate lines that you don't want to see
+	/*.line[type=system],
+	.line[type=mode],
+	.line[type=reply]{display:none}*/
 
 //	==========
 /*	Nick colors */
@@ -152,6 +162,8 @@
 	.message[type=privmsg],
 	.message[type=notice] { font-style: normal }
 	.message[type=error] { font-weight: bold }
+	.message[type=invite]:before,
+	.message[type=invite]:after{ content: ' *** ' }
 
 
 //	==========

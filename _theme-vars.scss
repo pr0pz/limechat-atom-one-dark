@@ -35,10 +35,10 @@
 	$body-color: $white;
 	$link-color: $light-blue;
 	$link-color-hover: $purple;
-	$hightlight-bg: rgba( $light-red, .15 );			// Highlight line background
-	$highlight-color: $light-red;	// Highlight color
-	$time: $cyan;					// Time of message
-	$place: $blue;					// Place of message (chan, pm, servername)
+	$hightlight-bg: rgba( $light-red, .2 );	// Highlight line background
+	$highlight-color: $light-red;			// Highlight color
+	$time: $cyan;							// Time of message
+	$place: $blue;							// Place of message (chan, pm, servername)
 
 	// Different Nick colors
 	$nick-colors: (
